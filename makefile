@@ -1,0 +1,41 @@
+#variables
+NAME = libft.a
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -g
+
+SRCS = ft_isalpha.c \
+	ft_isdigit.c \
+	ft_isalnum.c \
+	ft_isascii.c \
+	ft_isprint.c \
+	ft_strlen.c \
+	ft_memset.c \
+	ft_bzero.c \
+	ft_memcpy.c \
+	ft_memmove.c \
+	ft_strlcpy.c \
+	ft_strlcat.c
+
+OBJS = $(SRCS:.c=.o)
+HEADERS = libft.h
+
+all : $(NAME)
+
+$(NAME) : $(OBJS)
+	ar -rc $@ $(OBJS)
+	ranlib $@
+
+%.o : %.c $(HEADERS)
+	$(CC) -c $(CFLAGS) $< -o $@
+
+.PHONNY: all clean fclean re 
+
+clean:
+	rm -f $(OBJS)
+
+fclean:
+	rm -f $(OBJS) $(NAME)
+
+re: fclean clean all
+
+
