@@ -1,4 +1,3 @@
-#variables
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
@@ -14,28 +13,28 @@ SRCS = ft_isalpha.c \
 	ft_memcpy.c \
 	ft_memmove.c \
 	ft_strlcpy.c \
-	ft_strlcat.c
+	ft_strlcat.c \
+	ft_toupper.c \
+	ft_tolower.c
 
 OBJS = $(SRCS:.c=.o)
 HEADERS = libft.h
 
-all : $(NAME)
+all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME): $(OBJS)
 	ar -rc $@ $(OBJS)
 	ranlib $@
 
-%.o : %.c $(HEADERS)
+%.o: %.c $(HEADERS)
 	$(CC) -c $(CFLAGS) $< -o $@
-
-.PHONNY: all clean fclean re 
 
 clean:
 	rm -f $(OBJS)
 
-fclean:
-	rm -f $(OBJS) $(NAME)
+fclean: clean
+	rm -f $(NAME)
 
-re: fclean clean all
+re: fclean all
 
-
+.PHONY: all clean fclean re
