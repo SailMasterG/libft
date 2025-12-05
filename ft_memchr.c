@@ -6,7 +6,7 @@
 /*   By: masterg <masterg@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 09:40:03 by masterg           #+#    #+#             */
-/*   Updated: 2025/12/05 09:54:37 by masterg          ###   ########.fr       */
+/*   Updated: 2025/12/05 09:55:14 by masterg          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	unsigned char *string;
-	unsigned char *search_caracter;
+	unsigned char	*string;
+	unsigned char	*search_caracter;
 
 	*string = str;
 	*search_caracter = c;
