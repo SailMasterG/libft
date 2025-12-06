@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chguerre <chguerre@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: sailmaster </var/spool/mail/sailmaster>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/04 16:51:37 by chguerre          #+#    #+#             */
-/*   Updated: 2025/12/04 16:52:31 by chguerre         ###   ########.ch       */
+/*   Created: 2025/12/06 07:42:43 by sailmaster        #+#    #+#             */
+/*   Updated: 2025/12/06 11:41:22 by sailmaster       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, char c);
 int		ft_strcmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
+int		memcmp(const void *pointer1, const void *pointer2, size_t size);
+char	*strnstr(const char *big, const char *little, size_t len);
 
 #endif // !LIBFT_H
