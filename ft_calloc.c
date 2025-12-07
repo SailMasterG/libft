@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masterg <masterg@student.42.fr>            +#+  +:+       +#+        */
+/*   By: chguer <chguerre@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/03 15:19:50 by masterg           #+#    #+#             */
-/*   Updated: 2025/12/06 17:19:57 by sailmaster       ###   ########.fr       */
+/*   Created: 2025/12/06 21:40:49 by chguer            #+#    #+#             */
+/*   Updated: 2025/12/06 21:40:58 by chguer           ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t counter, size_t taille)
 {
-	char	*ptr;
+	void	*ptr;
+	size_t	taille_total;
 
-	ptr = (char *)s;
-	while (n > 0)
-	{
-		*ptr++ = (unsigned char)c;
-		n--;
-	}
-	return (s);
+	taille_total = counter * taille;
+	ptr = malloc(taille_total);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, taille_total);
+	return (ptr);
 }

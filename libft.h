@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: sailmaster </var/spool/mail/sailmaster>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/06 07:42:43 by sailmaster        #+#    #+#             */
-/*   Updated: 2025/12/06 11:41:22 by sailmaster       ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -33,7 +21,12 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, char c);
 int		ft_strcmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
-int		memcmp(const void *pointer1, const void *pointer2, size_t size);
-char	*strnstr(const char *big, const char *little, size_t len);
+int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_atoi(const char *str);
+void	*ft_calloc(size_t counter, size_t taille);
+char    *ft_strdup(const char *s);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
 
 #endif // !LIBFT_H
