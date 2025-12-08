@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yourlogin <youremail@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: chguerre <youremail@student.42lausanne.ch> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 20:55:49 by yourlogin         #+#    #+#             */
-/*   Updated: 2025/12/06 20:57:08 by yourlogin        ###   ########.ch       */
+/*   Updated: 2025/12/07 20:47:37 by sailmaster       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

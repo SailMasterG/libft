@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chguerre <chguerre@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: chguerre <chguerre@student.42lausanne.ch>    +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 16:56:01 by chguerre          #+#    #+#             */
-/*   Updated: 2025/12/04 16:56:01 by chguerre         ###   ########.ch       */
+/*   Updated: 2025/12/07 20:44:12 by sailmaster       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
