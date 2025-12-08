@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sailmaster </var/spool/mail/sailmaster>    +#+  +:+       +#+        */
+/*   By: chguerre <chguerre@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/07 20:49:05 by sailmaster        #+#    #+#             */
-/*   Updated: 2025/12/08 10:03:57 by sailmaster       ###   ########.fr       */
+/*   Created: 2025/12/08 18:00:47 by chguerre          #+#    #+#             */
+/*   Updated: 2025/12/08 18:00:50 by chguerre         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,19 +51,19 @@ char	*get_new_word(const char **s, char c)
 size_t	countwords(char const *s, char c)
 {
 	size_t	count;
-	bool	insideword;
+	int		insideword;
 
 	count = 0;
 	while (*s)
 	{
-		insideword = false;
+		insideword = 0;
 		while (*s == c && *s)
 			s++;
 		while (*s != c && *s)
 		{
 			if (!insideword)
 			{
-				insideword = true;
+				insideword = 1;
 				count++;
 			}
 			s++;
@@ -96,7 +96,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	arraystring[qywords] = '\0';
+	arraystring[qywords] = NULL;
 	return (arraystring);
 }
 
