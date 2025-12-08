@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chguerre <chguerre@student.42lausanne.ch>    +#+  +:+       +#+      */
+/*   By: chguerre <chguerre@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/08 16:34:34 by chguerre          #+#    #+#             */
-/*   Updated: 2025/12/08 17:59:24 by chguerre         ###   ########.ch       */
+/*   Created: 2025/12/08 18:03:18 by chguerre          #+#    #+#             */
+/*   Updated: 2025/12/08 18:03:40 by chguerre         ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
