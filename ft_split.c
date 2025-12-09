@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chguerre <chguerre@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: chguerre <chguerre@student.lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 18:00:47 by chguerre          #+#    #+#             */
-/*   Updated: 2025/12/08 18:00:50 by chguerre         ###   ########.ch       */
+/*   Updated: 2025/12/09 10:04:46 by chguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char	**ft_split(char const *s, char c)
 	arraystring[qywords] = NULL;
 	return (arraystring);
 }
-
+/*
 int	main(void)
 {
 	char	*str;
@@ -121,3 +121,4 @@ int	main(void)
 	freememory(resultado);
 	return (0);
 }
+*/
