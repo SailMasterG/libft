@@ -1,0 +1,22 @@
+# Ignorar binarios y objetos
+*.o
+*.a
+*.so
+
+# Ignorar main.c
+main.c
+
+# Ignorar cualquier archivo que no sea .c, .h o Makefile
+# (Permite .c)
+!*.c
+# (Permite .h)
+!*.h
+# (Permite Makefile)
+!Makefile
+# En caso de variantes
+!makefile
+!MAKEFILE
+
+# Ignorar todo lo demás
+*
+
