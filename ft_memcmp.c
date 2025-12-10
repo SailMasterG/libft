@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chguerre   <sailguerrero91@gmail.com  >    +#+  +:+       +#+        */
+/*   By: chguerre <chguerre@student.lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 07:38:45 by sailmaster        #+#    #+#             */
-/*   Updated: 2025/12/06 11:45:13 by sailmaster       ###   ########.fr       */
+/*   Updated: 2025/12/09 19:18:28 by chguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	memcmp(const void *pointer1, const void *pointer2, size_t size)
+int	ft_memcmp(const void *pointer1, const void *pointer2, size_t size)
 {
 	unsigned char	*cadena1;
 	unsigned char	*cadena2;

@@ -6,7 +6,7 @@
 /*   By: chguerre <chguerre@student.lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 13:41:44 by chguerre          #+#    #+#             */
-/*   Updated: 2025/12/09 14:56:06 by chguerre         ###   ########.fr       */
+/*   Updated: 2025/12/09 19:16:23 by chguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i] != '\0')
 	{
-		f(i, s);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }

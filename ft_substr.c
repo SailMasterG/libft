@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chguerre <chguerre@42lausanne.ch>           +#+  +:+       +#+       */
+/*   By: chguerre <chguerre@student.lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 10:07:36 by chguerre          #+#    #+#             */
-/*   Updated: 2025/12/07 20:48:07 by sailmaster       ###   ########.fr       */
+/*   Updated: 2025/12/09 21:12:29 by chguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	lentotal;
-	int		len_s;
+	size_t	len_s;
 
 	if (s == NULL)
 		return (NULL);
@@ -25,11 +25,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= (unsigned int)len_s)
 	{
 		str = malloc(1);
-		if (str != NULL)
-		{
-			str[0] = '\0';
-			return (str);
-		}
+		if (str == NULL)
+			return (NULL);
+		str[0] = '\0';
+		return (str);
 	}
 	lentotal = len;
 	if (lentotal > (size_t)len_s - start)
