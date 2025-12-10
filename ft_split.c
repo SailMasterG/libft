@@ -14,14 +14,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void	freememory(char **str)
+void	freememory(char **str, size_t count)
 {
 	size_t	i;
 
 	i = 0;
-	if (str == NULL)
-		return ;
-	while (str[i] != NULL)
+	while (i < count)
 	{
 		free(str[i]);
 		i++;
@@ -39,12 +37,14 @@ char	*get_new_word(const char **s, char c)
 		(*s)++;
 	start = (char *)*s;
 	len = 0;
-	while (**s != c)
+	while (**s && **s != c)
 	{
 		len++;
 		(*s)++;
 	}
 	word = ft_substr(start, 0, len);
+	if (!word)
+		return (0);
 	return (word);
 }
 
@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 			arraystring[i] = temp;
 		else
 		{
-			freememory(arraystring);
+			freememory(arraystring, i);
 			return (NULL);
 		}
 		i++;
@@ -99,7 +99,7 @@ char	**ft_split(char const *s, char c)
 	arraystring[qywords] = NULL;
 	return (arraystring);
 }
-/*
+/* 
 int	main(void)
 {
 	char	*str;
@@ -107,18 +107,19 @@ int	main(void)
 	char	**resultado;
 	int		i;
 
-	str = "__Hola_ soy un nuevo texto.";
+	str = "wdqqwdqw";
 	separador = ' ';
+	printf("[%c]\n", separador);
 	printf("La cadena completa es %s\n", str);
-	countwords(str, separador);
+	// countwords(str, separador);
 	resultado = ft_split(str, separador);
 	i = 0;
 	while (resultado[i] != NULL)
 	{
-		printf("%s\n", resultado[i]);
+		printf("-%s\n", resultado[i]);
 		i++;
 	}
 	freememory(resultado);
 	return (0);
 }
-*/
+ */
