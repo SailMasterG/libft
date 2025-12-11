@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chguerre <chguerre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/04 21:30:45 by masterg           #+#    #+#             */
-/*   Updated: 2025/12/10 18:57:02 by chguerre         ###   ########.fr       */
+/*   Created: 2025/12/10 17:59:58 by chguerre          #+#    #+#             */
+/*   Updated: 2025/12/11 17:24:42 by chguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	*dernier_mach;
+	t_list	*current;
+	t_list	*next_node;
 
-	dernier_mach = NULL;
-	while (*str != '\0')
+	current = *lst;
+	if (!*lst || !del)
+		return ;
+	while (current)
 	{
-		if (*str == (char)c)
-		{
-			dernier_mach = (char *) str;
-		}
-		str++;
+		next_node = current->next;
+		ft_lstdelone(current, del);
+		current = next_node;
 	}
-	if ((char)c == '\0')
-		dernier_mach = (char *) str;
-	return (dernier_mach);
+	*lst = NULL;
 }

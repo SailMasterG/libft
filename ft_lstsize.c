@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chguerre <chguerre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/04 21:30:45 by masterg           #+#    #+#             */
-/*   Updated: 2025/12/10 18:57:02 by chguerre         ###   ########.fr       */
+/*   Created: 2025/12/10 17:05:57 by chguerre          #+#    #+#             */
+/*   Updated: 2025/12/11 16:36:03 by chguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+int	ft_lstsize(t_list *lst)
 {
-	char	*dernier_mach;
+	int	count;
 
-	dernier_mach = NULL;
-	while (*str != '\0')
+	count = 0;
+	while (lst != NULL)
 	{
-		if (*str == (char)c)
-		{
-			dernier_mach = (char *) str;
-		}
-		str++;
+		lst = lst->next;
+		count++;
 	}
-	if ((char)c == '\0')
-		dernier_mach = (char *) str;
-	return (dernier_mach);
+	return (count);
 }

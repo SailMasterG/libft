@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chguerre <chguerre@student.lausanne.ch>    +#+  +:+       +#+        */
+/*   By: chguerre <chguerre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 18:29:46 by chguerre          #+#    #+#             */
-/*   Updated: 2025/12/09 19:20:58 by chguerre         ###   ########.fr       */
+/*   Updated: 2025/12/11 14:49:43 by chguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -36,7 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *str, int c);
-char	*ft_strrchr(const char *str, char c);
+char	*ft_strrchr(const char *str, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
@@ -56,5 +58,13 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif // !LIBFT_H
